@@ -1,18 +1,17 @@
 
 console.log("JavaScript Loaded");
 
-let items = document.querySelectorAll('.carousel .carousel-item')
-
-items.forEach((el) => {
-    const minPerSlide = 4
-    let next = el.nextElementSibling
-    for (var i=1; i<minPerSlide; i++) {
-        if (!next) {
-            // wrap carousel by using first child
-        	next = items[0]
-      	}
-        let cloneChild = next.cloneNode(true)
-        el.appendChild(cloneChild.children[0])
-        next = next.nextElementSibling
-    }
-})
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3, // Number of slides visible at once
+    spaceBetween: 10, // Space between slides
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    loop: true, // Enable looping
+  });
+  
