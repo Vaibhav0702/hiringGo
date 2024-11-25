@@ -13,6 +13,11 @@ body {
     width: 90%;
 }
 
+.baseContainer{
+    width: 96%;
+    margin: auto;
+}
+
 .logo {
     width: 98%;
 }
@@ -280,3 +285,46 @@ body {
     --bs-bg-opacity: 1;
     background-color: rgb(43 48 53 / 0%) !important;
 }
+
+.input-container {
+    position: relative;
+    display: inline-block;
+    width: 300px; 
+    margin-right: 20px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px 40px; 
+    border: none;
+    border-radius: 50px;
+  }
+  
+  .input-container::before,
+  .input-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .input-container::before {
+    left: 10px;
+    background-image: url('../images/svgviewer-output.svg');
+  }
+  
+  .input-container::after {
+    right: 10px;
+    background-image: url('../images/arrow-right-long-custom.svg');
+  }
+  
+  .play{
+    width: 20%;
+  }
+
+  
